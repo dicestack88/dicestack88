@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dicestack88 (hopefully best youtuber)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>😎The OFFICIAL Dicestack88 Website😎</h1>
+
+  <div class="coolbox">
+    <p>Yo I'm <strong>dicestack88</strong>. I make Minecraft vids, roast the Bloxd.io community 💀, and drop chaotic web pranks 😎 
+      check out some of the links below. It includes my <strong>Eaglercraft Launcher</strong> and many other cool stuff to check out :)</p>
+  </div>
+
+  <button class="btn" onclick="window.location.href='rickroll.html'">🤔 I wonder what this button does</button>
+  <button class="btn" onclick="window.location.href='launcher.html'">💾 My Eaglercraft Launcher</button>
+  <button class="btn" onclick="window.location.href='subcount.html'">🔴 Live Sub Count‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ :D</button>
+  <button class="btn" onclick="window.location.href='thickofit.html'">I wonder what this does too</button>
+
+
+  <!-- Time and date container -->
+  <div class="datetime" id="datetime"></div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p>👾 Thanks for visiting Dicestack88's Site! Stay epic! 👾</p>
+      <div class="social-links"> 
+        <a href="https://www.youtube.com/@dicestack88" target="_blank">YouTube</a>
+        <a href="mailto:dicestack88@gmail.com">Send me an email</a>
+      </div>
+      <p>© 2025 Dicestack88. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to update the current date and time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+      };
+      const timeString = now.toLocaleString('en-US', options);
+      document.getElementById('datetime').textContent = timeString;
+    }
+
+    // Update time every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Immediately call to set the time on page load
+  </script>
+
+</body>
+</html>
