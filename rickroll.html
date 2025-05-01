@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Totally Not a Rickroll</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffee, #ffcc00);
+      background-size: 400% 400%;
+      animation: glowBg 10s ease infinite;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes glowBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .rick-msg {
+      position: absolute;
+      top: 20px;
+      color: #fff;
+      font-size: 2em;
+      text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+      animation: floaty 3s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="rick-msg">Bro actually thought it wasn't a rickroll 😭</div>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allow="autoplay; fullscreen"></iframe>
+</body>
+</html>
