@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dicestack88's 2048</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #faf8ef;
+      font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+    h1 {
+      font-size: 80px;
+      margin: 20px 0;
+      color: #776e65;
+    }
+    #grid-container {
+      width: 500px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      background: #bbada0;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    .tile {
+      width: 100px;
+      height: 100px;
+      background: #cdc1b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      font-weight: bold;
+      color: #776e65;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+    }
+    .tile-2    { background: #eee4da; color: #776e65; }
+    .tile-4    { background: #ede0c8; color: #776e65; }
+    .tile-8    { background: #f2b179; color: #f9f6f2; }
+    .tile-16   { background: #f59563; color: #f9f6f2; }
+    .tile-32   { background: #f67c5f; color: #f9f6f2; }
+    .tile-64   { background: #f65e3b; color: #f9f6f2; }
+    .tile-128  { background: #edcf72; color: #f9f6f2; font-size: 40px; }
+    .tile-256  { background: #edcc61; color: #f9f6f2; font-size: 40px; }
+    .tile-512  { background: #edc850; color: #f9f6f2; font-size: 40px; }
+    .tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 35px; }
+    .tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 35px; }
+  </style>
+</head>
+<body>
+  <center><h1>Dicestack88's 2048</h1></center>
+  <div id="grid-container"></div>
+  <script>
+    const container = document.getElementById("grid-container");
+    let grid = [];
+
+    function init() {
+      grid = new Array(4).fill(null).map(() => new Array(4).fill(0));
+      addRandomTile();
+      addRandomTile();
+      draw();
+    }
+
+    function draw() {
+      container.innerHTML = "";
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          const tile = document.createElement("div");
+          const val = grid[r][c];
+          tile.className = "tile";
+          if (val !== 0) {
+            tile.textContent = val;
+            tile.classList.add("tile-" + val);
+          }
+          container.appendChild(tile);
+        }
+      }
+    }
+
+    function addRandomTile() {
+      let empty = [];
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          if (grid[r][c] === 0) empty.push([r, c]);
+        }
+      }
+      if (empty.length === 0) return;
+      const [r, c] = empty[Math.floor(Math.random() * empty.length)];
+      grid[r][c] = Math.random() < 0.9 ? 2 : 4;
+    }
+
+    function move(dir) {
+      let moved = false;
+      for (let i = 0; i < 4; i++) {
+        let line = [];
+        for (let j = 0; j < 4; j++) {
+          let val = dir === "left" || dir === "right" ? grid[i][j] : grid[j][i];
+          line.push(val);
+        }
+
+        if (dir === "right" || dir === "down") line.reverse();
+        let merged = [];
+        for (let j = 0; j < line.length; j++) {
+          if (line[j] === 0) continue;
+          if (line[j] === line[j+1]) {
+            merged.push(line[j] * 2);
+            j++;
+            moved = true;
+          } else {
+            merged.push(line[j]);
+          }
+        }
+        while (merged.length < 4) merged.push(0);
+        if (dir === "right" || dir === "down") merged.reverse();
+
+        for (let j = 0; j < 4; j++) {
+          let val = merged[j];
+          if ((dir === "left" || dir === "right") && grid[i][j] !== val) {
+            grid[i][j] = val;
+            moved = true;
+          } else if ((dir === "up" || dir === "down") && grid[j][i] !== val) {
+            grid[j][i] = val;
+            moved = true;
+          }
+        }
+      }
+
+      if (moved) {
+        addRandomTile();
+        draw();
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowLeft": move("left"); break;
+        case "ArrowRight": move("right"); break;
+        case "ArrowUp": move("up"); break;
+        case "ArrowDown": move("down"); break;
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>
