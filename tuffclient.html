@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><title>Eaglercraft Loader</title></head>
+<head>
+  <title>Eaglercraft Client</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
 <body>
-<script>
-  fetch("https://drive.google.com/uc?export=download&id=1PkHhwG9HMSpk6qF-AzYRKJGR_YgA3p2o")
-    .then(res => res.text())
-    .then(html => {
-      document.open();
-      document.write(html);
-      document.close();
-    })
-    .catch(err => {
-      document.body.innerHTML = "<h1>Failed to load Eaglercraft</h1><p>" + err + "</p>";
-    });
-</script>
+
+  <iframe src="https://drive.google.com/uc?export=download&id=1PkHhwG9HMSpk6qF-AzYRKJGR_YgA3p2o"></iframe>
+
 </body>
 </html>
