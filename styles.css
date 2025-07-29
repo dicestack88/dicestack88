@@ -20,27 +20,29 @@ h1 {
 }
 
 .btn {
-  background: #ff00cc;
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
   background: linear-gradient(to right, #ff00cc, #3333ff);
+  color: white;
   border: none;
-  color: #fff;
-  padding: 15px 30px;
-  margin: 15px 10px;
-  font-size: 1.3em;
   border-radius: 20px;
+  box-shadow: 0 0 15px #ff00cc;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s;
-  box-shadow: 0 0 10px #ff00cc;
-  max-width: 300px;
-  width: 100%;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 1px 1px 3px #000;
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #ff00cc, 0 0 30px #3333ff;
+  transform: scale(1.08);
+  background: linear-gradient(to right, #3333ff, #ff00cc);
+  box-shadow: 0 0 25px #ff00cc, 0 0 30px #3333ff;
 }
 
 .coolbox {
