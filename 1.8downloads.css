@@ -1,0 +1,116 @@
+/* === GLOBAL BODY === */
+body {
+  background-image: url('images/background3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #e0f2f1;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
+
+/* === HEADER TEXT === */
+h1 {
+  font-size: 3em;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #6ff;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px #0072ff99;
+}
+
+/* === WRAPPER AROUND ALL LINK BLOCKS === */
+.links-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #004d40aa;
+}
+
+/* === EACH INDIVIDUAL DOWNLOAD ROW === */
+.link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* === ALTERNATING ROW STYLES === */
+.link-row:nth-child(odd) {
+  background-color: #0b3d35;
+  flex-direction: row;
+  text-align: left;
+}
+
+.link-row:nth-child(even) {
+  background-color: #064235;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* === DESCRIPTION TEXT NEXT TO BUTTONS === */
+.desc {
+  flex: 1 1 60%;
+  color: #a2d8ce;
+  font-weight: 600;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #004d40);
+  font-size: 1.15em;
+  padding: 0 10px;
+}
+
+/* === BUTTON STYLES === */
+.btn {
+  flex: 0 0 250px;
+  padding: 18px 28px;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00f0ff99, 0 0 25px #00c6ffbb;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  box-sizing: border-box;
+  user-select: none;
+  text-shadow: 0 1px 2px #003366aa;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(145deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 20px #00f0ffcc, 0 0 10px #00e0ffcc;
+}
+
+/* === RESPONSIVE MOBILE FIXES === */
+@media (max-width: 720px) {
+  .link-row {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px;
+  }
+
+  .desc {
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .btn {
+    flex: none;
+    width: 100%;
+    max-width: 350px;
+  }
+}
