@@ -1,13 +1,16 @@
 /* === Background + Base Layout === */
 body {
-  background: linear-gradient(135deg, #4db6ac, #00695c);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
+    url('images/background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-position: 0% 50%;
   color: #e0f2f1;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
   padding: 50px;
-  animation: bgMove 20s ease infinite;
-  background-size: 400% 400%;
   margin: 0;
+  animation: bgMove 20s ease infinite;
 }
 
 /* === Background Animation === */
@@ -68,7 +71,7 @@ p {
   justify-content: space-between;
   padding: 30px 40px;
   gap: 30px;
-  flex-wrap: nowrap; /* THIS IS KEY: no wrapping so side-by-side stays */
+  flex-wrap: nowrap; /* no wrapping to keep side-by-side */
 }
 
 /* Zigzag alternating background & direction */
