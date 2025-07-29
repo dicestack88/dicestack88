@@ -5,10 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .download-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .download-buttons a button {
+      padding: 15px 25px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      color: white;
+      box-shadow: 0 0 15px #00f0ff99;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .download-buttons a button:hover {
+      transform: scale(1.08);
+      background: linear-gradient(145deg, #0072ff, #00c6ff);
+      box-shadow: 0 0 20px #00f0ffcc, 0 0 10px #00e0ffcc;
+    }
+
+    .container h1 {
+      font-size: 3em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+    }
+
+    .container p {
+      color: #6ff;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">    <h1>🚀 Download Zone (1.12)</h1>
+  <div class="container">
+    <h1>🚀 Download Zone (1.12)</h1>
     <p>Click on a file to download it ⬇️</p>
 
     <div class="download-buttons">
@@ -24,15 +64,15 @@
         <button>Download Low Fire 1.12</button>
       </a>
 
-       <a href="downloads/Lively Nature.zip" download>
+      <a href="downloads/Lively Nature.zip" download>
         <button>Download Lively Nature 1.12</button>
       </a>
 
-       <a href="downloads/No Explosion Particles 1.12.zip" download>
+      <a href="downloads/No Explosion Particles 1.12.zip" download>
         <button>Download No Explosion Particles 1.12</button>
       </a>
 
-       <a href="downloads/Small Shield Totem.zip" download>
+      <a href="downloads/Small Shield Totem.zip" download>
         <button>Download Small Shield and Totem 1.12</button>
       </a>
     </div>
