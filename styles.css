@@ -1,8 +1,6 @@
 /* === Background + Base Layout === */
 body {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
-    url('images/background.png') no-repeat center center fixed;
+  background: url('images/background.png') no-repeat center center fixed;
   background-size: cover;
   background-position: 0% 50%;
   color: #e0f2f1;
