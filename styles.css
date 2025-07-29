@@ -1,19 +1,26 @@
 /* === Background + Base Layout === */
 body {
-  background: linear-gradient(135deg, #4db6ac, #00695c); /* calm dark teal vibes */
+  background: linear-gradient(135deg, #4db6ac, #00695c);
   color: #e0f2f1;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
   padding: 50px;
   animation: bgMove 20s ease infinite;
   background-size: 400% 400%;
+  margin: 0;
 }
 
 /* === Background Animation === */
 @keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* === Header === */
@@ -24,36 +31,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* === Download Buttons === */
-.btn {
-  display: block;
-  width: 90%;
-  max-width: 450px;
-  margin: 20px auto;
-  padding: 20px 30px;
-  font-size: 1.4em;
-  font-weight: 700;
-  font-family: inherit;
-  background: linear-gradient(90deg, #00e676, #1de9b6);
-  color: #00332e;
-  border: 2px solid #00ffbf;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #00ffbf, 0 0 25px #00ffbf;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s;
-  text-shadow: 0 1px 1px #ffffff80;
-  box-sizing: border-box;
-}
-
-.btn:hover {
-  transform: scale(1.08);
-  background: linear-gradient(90deg, #1de9b6, #00e676);
-  box-shadow: 0 0 30px #00ffc3, 0 0 40px #1de9b6;
-}
-
 /* === Container Box === */
 .coolbox {
-  background: rgba(0, 150, 136, 0.1); /* soft green overlay */
+  background: rgba(0, 150, 136, 0.1);
   border: 2px solid #80cbc4;
   padding: 30px;
   border-radius: 18px;
@@ -67,6 +47,101 @@ h1 {
 /* === Paragraphs / Subtext === */
 p {
   font-size: 1.1em;
-  margin-bottom: 30px;
+  margin: 0;
   color: #b2dfdb;
+  max-width: 500px;
+}
+
+/* === Links Wrapper === */
+.links-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #004d40aa;
+}
+
+/* === Each Link Row === */
+.link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Zigzag alternating background & direction */
+.link-row:nth-child(odd) {
+  background-color: #0b3d35; /* dark teal */
+  flex-direction: row;
+}
+
+.link-row:nth-child(even) {
+  background-color: #064235; /* even darker green/teal */
+  flex-direction: row-reverse;
+}
+
+/* Description text */
+.desc {
+  flex: 1 1 45%;
+  text-align: left;
+  color: #a2d8ce;
+  font-weight: 600;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #004d40);
+}
+
+/* Buttons */
+.btn {
+  flex: 0 0 250px;
+  padding: 18px 28px;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(90deg, #00e676, #1de9b6);
+  color: #00332e;
+  border: 2px solid #00ffbf;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ffbf, 0 0 25px #00ffbf;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+  text-shadow: 0 1px 1px #ffffff80;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #1de9b6, #00e676);
+  box-shadow: 0 0 30px #00ffc3, 0 0 40px #1de9b6;
+}
+
+/* Date and time styling */
+.datetime {
+  margin-top: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #b2dfdb;
+  text-shadow: 0 0 5px #004d40;
+  user-select: none;
+}
+
+/* Responsive tweak */
+@media (max-width: 720px) {
+  .link-row {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px;
+  }
+  .desc {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .btn {
+    flex: none;
+    width: 100%;
+    max-width: 350px;
+  }
 }
