@@ -30,25 +30,25 @@ h1 {
   width: 90%;
   max-width: 450px;
   margin: 20px auto;
-  padding: 18px 25px;
-  font-size: 1.3em;
-  font-weight: 600;
+  padding: 20px 30px;
+  font-size: 1.4em;
+  font-weight: 700;
   font-family: inherit;
-  background: linear-gradient(90deg, #26a69a, #00796b);
-  color: #ffffff;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #26a69a;
+  background: linear-gradient(90deg, #00e676, #1de9b6);
+  color: #00332e;
+  border: 2px solid #00ffbf;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ffbf, 0 0 25px #00ffbf;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.3s;
-  text-shadow: 1px 1px 2px #00000050;
+  text-shadow: 0 1px 1px #ffffff80;
   box-sizing: border-box;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #1de9b6, 0 0 20px #00acc1;
-  background: linear-gradient(90deg, #00796b, #26a69a);
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #1de9b6, #00e676);
+  box-shadow: 0 0 30px #00ffc3, 0 0 40px #1de9b6;
 }
 
 /* === Container Box === */
