@@ -2,58 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>dicestack88's Zone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <h1>😎The OFFICIAL Dicestack88 Website😎</h1>
 
   <div class="coolbox">
-    <p>Yo I'm <strong>dicestack88</strong>. I make Minecraft vids, roast the Bloxd.io community 💀, and drop chaotic web pranks 😎 
+    <p>Yo I'm <strong>dicestack88</strong>. I make Minecraft vids, roast the Bloxd.io community 💀, and drop chaotic web pranks 😎
       check out some of the links below. It includes my <strong>Eaglercraft Launcher</strong> and many other cool stuff to check out :)
-    I also highly reccomend subscribing to my yt channel as it helps my channel grow to a bigger audience and it means i might be able to make money!💸</p>
+      I also highly recommend subscribing to my yt channel as it helps my channel grow to a bigger audience and it means I might be able to make money!💸
+    </p>
   </div>
 
-  <div class="feature-list">
-    <section class="feature">
-      <div class="feature-text">📺 Check out my YouTube</div>
-      <button class="btn" onclick="window.location.href='https://www.youtube.com/@dicestack88'">Go ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">🤔 I wonder what this button does</div>
-      <button class="btn" onclick="window.location.href='rickroll.html'">Find Out ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">💾 My Eaglercraft Launcher</div>
-      <button class="btn" onclick="window.location.href='launcher.html'">Launch ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">🔴 Live Sub Count‎ ‎ ‎ ‎ ‎ ‎ ‎ :D</div>
-      <button class="btn" onclick="window.location.href='subcount.html'">Watch ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">⬇ Download my EaglerLauncher!</div>
-      <button class="btn" onclick="window.location.href='https://www.mediafire.com/file/p3jycjj1xpqj47x/dicestack88launcher.html/file'">Download ➤</button> 
-    </section>
-    <section class="feature">
-      <div class="feature-text">Play 2⃣0⃣4⃣8⃣ 🎮</div>
-      <button class="btn" onclick="window.location.href='2048.html'">Play ➤</button> 
-    </section>
-    <section class="feature">
-      <div class="feature-text">🔥 Best Eaglercraft 1.12 Client</div>
-      <button class="btn" onclick="window.location.href='wasm client/index.html'">Try Now ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">⬇ My Texture Packs for 1.12</div>
-      <button class="btn" onclick="window.location.href='download1.12.html'">Download ➤</button>
-    </section>
-    <section class="feature">
-      <div class="feature-text">⬇ My Texture Packs for 1.8</div>
-      <button class="btn" onclick="window.location.href='download1.8.html'">Download ➤</button>
-    </section>
+  <div class="links-wrapper">
+    <div class="link-row">
+      <p class="desc">📺 Check out my YouTube channel for epic Minecraft vids & chaos</p>
+      <button class="btn" onclick="window.location.href='https://www.youtube.com/@dicestack88'">Go to YouTube</button>
+    </div>
+
+    <div class="link-row">
+      <button class="btn" onclick="window.location.href='rickroll.html'">What does this button do? 🤔</button>
+      <p class="desc">Click to find out the surprise I got for you! (You won't regret it... or maybe you will 😂)</p>
+    </div>
+
+    <div class="link-row">
+      <p class="desc">💾 Download my custom Eaglercraft Launcher to join my Minecraft adventures</p>
+      <button class="btn" onclick="window.location.href='launcher.html'">Get Launcher</button>
+    </div>
+
+    <div class="link-row">
+      <button class="btn" onclick="window.location.href='subcount.html'">Live Sub Count 🔴</button>
+      <p class="desc">Check how many subscribers are watching me grow right now!</p>
+    </div>
+
+    <div class="link-row">
+      <p class="desc">⬇ Download my EaglerLauncher directly from Mediafire</p>
+      <button class="btn" onclick="window.location.href='https://www.mediafire.com/file/p3jycjj1xpqj47x/dicestack88launcher.html/file'">Download</button>
+    </div>
+
+    <div class="link-row">
+      <button class="btn" onclick="window.location.href='2048.html'">Play 2⃣0⃣4⃣8⃣ 🎮</button>
+      <p class="desc">Take a break and crush some numbers with this classic game.</p>
+    </div>
+
+    <div class="link-row">
+      <p class="desc">🔥 Best Eaglercraft 1.12 client out there, ready to rock your Minecraft</p>
+      <button class="btn" onclick="window.location.href='wasm client/index.html'">Launch Client</button>
+    </div>
+
+    <div class="link-row">
+      <button class="btn" onclick="window.location.href='download1.12.html'">My Texture Packs for 1.12⬇</button>
+      <p class="desc">Customize your Minecraft world with my 1.12 texture packs.</p>
+    </div>
+
+    <div class="link-row">
+      <p class="desc">My Texture Packs for 1.8⬇</p>
+      <button class="btn" onclick="window.location.href='download1.8.html'">Download 1.8 Packs</button>
+    </div>
   </div>
 
   <div class="datetime" id="datetime"></div>
@@ -61,19 +70,18 @@
   <script>
     function updateDateTime() {
       const now = new Date();
-      const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
       };
       const timeString = now.toLocaleString('en-US', options);
       document.getElementById('datetime').textContent = timeString;
     }
-
     setInterval(updateDateTime, 1000);
     updateDateTime();
   </script>
