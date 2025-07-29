@@ -68,24 +68,25 @@ p {
   justify-content: space-between;
   padding: 30px 40px;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* THIS IS KEY: no wrapping so side-by-side stays */
 }
 
 /* Zigzag alternating background & direction */
 .link-row:nth-child(odd) {
   background-color: #0b3d35; /* dark teal */
   flex-direction: row;
+  text-align: left;
 }
 
 .link-row:nth-child(even) {
   background-color: #064235; /* even darker green/teal */
   flex-direction: row-reverse;
+  text-align: right;
 }
 
 /* Description text */
 .desc {
   flex: 1 1 45%;
-  text-align: left;
   color: #a2d8ce;
   font-weight: 600;
   user-select: none;
@@ -127,15 +128,14 @@ p {
   user-select: none;
 }
 
-/* Responsive tweak */
+/* Responsive tweak: on small screens, stack vertically */
 @media (max-width: 720px) {
   .link-row {
     flex-direction: column !important;
-    text-align: center;
+    text-align: center !important;
     padding: 20px;
   }
   .desc {
-    text-align: center;
     max-width: 100%;
     margin-bottom: 15px;
   }
