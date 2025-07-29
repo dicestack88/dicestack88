@@ -1,22 +1,14 @@
 /* === GLOBAL BODY === */
 body {
-  background-image: url('images/background2.png'), linear-gradient(135deg, #4db6ac, #00695c);
-  background-blend-mode: overlay;
+  background-image: url('images/background2.png');
   background-repeat: no-repeat;
-  background-size: cover, 400% 400%;
+  background-size: cover;
   background-position: center;
   color: #e0f2f1;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
   padding: 50px;
   margin: 0;
-  animation: bgMove 20s ease infinite;
-}
-
-@keyframes bgMove {
-  0% { background-position: center 0%, 0% 50%; }
-  50% { background-position: center 100%, 100% 50%; }
-  100% { background-position: center 0%, 0% 50%; }
 }
 
 /* === HEADER TEXT === */
