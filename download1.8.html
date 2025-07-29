@@ -2,66 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Downloads</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .download-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
+    body {
+      background: linear-gradient(135deg, #4db6ac, #00695c);
+      color: #e0f2f1;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding: 50px;
+      animation: bgMove 20s ease infinite;
+      background-size: 400% 400%;
+      margin: 0;
+    }
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-size: 3em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #6ff;
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 5px #0072ff99;
     }
 
-    .download-buttons a button {
-      padding: 15px 25px;
-      font-size: 1em;
-      font-weight: bold;
-      border: none;
+    .links-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
       border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #004d40aa;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 40px;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+
+    .link-row:nth-child(odd) {
+      background-color: #0b3d35;
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .link-row:nth-child(even) {
+      background-color: #064235;
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .desc {
+      flex: 1 1 60%;
+      color: #a2d8ce;
+      font-weight: 600;
+      user-select: none;
+      filter: drop-shadow(0 0 2px #004d40);
+      font-size: 1.15em;
+      padding: 0 10px;
+    }
+
+    .btn {
+      flex: 0 0 250px;
+      padding: 18px 28px;
+      font-size: 1.1em;
+      font-weight: 700;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
       background: linear-gradient(145deg, #00c6ff, #0072ff);
       color: white;
-      box-shadow: 0 0 15px #00f0ff99;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #00f0ff99, 0 0 25px #00c6ffbb;
       cursor: pointer;
-      transition: 0.3s ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      box-sizing: border-box;
+      user-select: none;
+      text-shadow: 0 1px 2px #003366aa;
     }
 
-    .download-buttons a button:hover {
+    .btn:hover {
       transform: scale(1.08);
       background: linear-gradient(145deg, #0072ff, #00c6ff);
       box-shadow: 0 0 20px #00f0ffcc, 0 0 10px #00e0ffcc;
     }
 
-    .container h1 {
-      font-size: 3em;
-      color: #0ff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
-    }
-
-    .container p {
-      color: #6ff;
-      font-size: 1.2em;
+    @media (max-width: 720px) {
+      .link-row {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px;
+      }
+      .desc {
+        max-width: 100%;
+        margin-bottom: 15px;
+        padding: 0;
+      }
+      .btn {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>🚀 Download Zone (1.12)</h1>
-    <p>Click on a file to download it ⬇️</p>
+  <h1>🚀 Download Zone (1.8)</h1>
+  <p>Click on a file to download it ⬇️</p>
 
-    <div class="download-buttons">
-      <a href="downloads/§6§lCitrine §c§l16x.zip" download>
-        <button>Download The First Ever Pack I Made, Citrine 16x</button>
-      </a>
+  <div class="links-wrapper">
 
-    <div class="download-buttons">
-      <a href="downloads/1.14 textures for 1.8.zip" download>
-        <button>Download 1.14 textures for 1.8</button>
-      </a>
+    <div class="link-row">
+      <p class="desc">The first ever pack I made, Citrine 16x — OG vibes 🔥</p>
+      <a href="downloads/§6§lCitrine §c§l16x.zip" download><button class="btn">Download Citrine 16x</button></a>
+    </div>
 
-     
+    <div class="link-row">
+      <a href="downloads/1.14 textures for 1.8.zip" download><button class="btn">Download 1.14 textures for 1.8</button></a>
+      <p class="desc">Fresh 1.14 textures ported to 1.8 gameplay</p>
+    </div>
+
   </div>
 
 </body>
