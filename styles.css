@@ -1,6 +1,7 @@
+/* === Background + Base Layout === */
 body {
-  background: linear-gradient(135deg, #e0f7fa, #a8e6cf); /* soft blue + green */
-  color: #004d40; /* deep greenish text */
+  background: linear-gradient(135deg, #4db6ac, #00695c); /* calm dark teal vibes */
+  color: #e0f2f1;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
   padding: 50px;
@@ -8,51 +9,64 @@ body {
   background-size: 400% 400%;
 }
 
+/* === Background Animation === */
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* === Header === */
 h1 {
   font-size: 3em;
-  color: #00695c;
+  color: #ffffff;
+  text-shadow: 0 0 5px #26a69a, 0 0 10px #00796b;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 3px rgba(0, 105, 92, 0.2);
 }
 
+/* === Download Buttons === */
 .btn {
   display: block;
   width: 90%;
   max-width: 450px;
   margin: 20px auto;
   padding: 18px 25px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 600;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background: linear-gradient(to right, #81c784, #4db6ac);
-  color: white;
+  font-family: inherit;
+  background: linear-gradient(90deg, #26a69a, #00796b);
+  color: #ffffff;
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 10px #26a69a;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+  text-shadow: 1px 1px 2px #00000050;
+  box-sizing: border-box;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(to right, #4db6ac, #81c784);
-  box-shadow: 0 6px 20px rgba(0, 150, 136, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #1de9b6, 0 0 20px #00acc1;
+  background: linear-gradient(90deg, #00796b, #26a69a);
 }
 
+/* === Container Box === */
 .coolbox {
-  background: rgba(255, 255, 255, 0.7);
-  border: 2px solid #4db6ac;
+  background: rgba(0, 150, 136, 0.1); /* soft green overlay */
+  border: 2px solid #80cbc4;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 18px;
   margin: 30px auto;
-  max-width: 700px;
-  color: #004d40;
+  max-width: 750px;
+  color: #ffffff;
   font-size: 1.2em;
-  box-shadow: 0 0 10px rgba(0, 150, 136, 0.2);
+  text-shadow: 0 0 3px #004d40;
+}
+
+/* === Paragraphs / Subtext === */
+p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #b2dfdb;
 }
