@@ -1,0 +1,148 @@
+/* === Background + Base Layout === */
+body {
+  background: url('images/changelogbackground.png') no-repeat center center fixed;
+  background-size: cover;
+  background-position: 0% 50%;
+  color: #e0f2f1;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  animation: bgMove 20s ease infinite;
+}
+
+/* === Background Animation === */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Header === */
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  text-shadow: 0 0 5px #26a69a, 0 0 10px #00796b;
+  margin-bottom: 20px;
+}
+
+/* === Container Box === */
+.coolbox {
+  background: rgba(0, 150, 136, 0.1);
+  border: 2px solid #80cbc4;
+  padding: 30px;
+  border-radius: 18px;
+  margin: 30px auto;
+  max-width: 750px;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-shadow: 0 0 3px #004d40;
+}
+
+/* === Paragraphs / Subtext === */
+p {
+  font-size: 1.1em;
+  margin: 0;
+  color: #b2dfdb;
+  max-width: 500px;
+}
+
+/* === Links Wrapper === */
+.links-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #004d40aa;
+}
+
+/* === Each Link Row === */
+.link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  gap: 30px;
+  flex-wrap: nowrap; /* no wrapping to keep side-by-side */
+}
+
+/* Zigzag alternating background & direction */
+.link-row:nth-child(odd) {
+  background-color: #0b3d35; /* dark teal */
+  flex-direction: row;
+  text-align: left;
+}
+
+.link-row:nth-child(even) {
+  background-color: #064235; /* even darker green/teal */
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Description text */
+.desc {
+  flex: 1 1 45%;
+  color: #a2d8ce;
+  font-weight: 600;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #004d40);
+}
+
+/* Buttons */
+.btn {
+  flex: 0 0 250px;
+  padding: 18px 28px;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(90deg, #00e676, #1de9b6);
+  color: #00332e;
+  border: 2px solid #00ffbf;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ffbf, 0 0 25px #00ffbf;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+  text-shadow: 0 1px 1px #ffffff80;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #1de9b6, #00e676);
+  box-shadow: 0 0 30px #00ffc3, 0 0 40px #1de9b6;
+}
+
+/* Date and time styling */
+.datetime {
+  margin-top: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #b2dfdb;
+  text-shadow: 0 0 5px #004d40;
+  user-select: none;
+}
+
+/* Responsive tweak: on small screens, stack vertically */
+@media (max-width: 720px) {
+  .link-row {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px;
+  }
+  .desc {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .btn {
+    flex: none;
+    width: 100%;
+    max-width: 350px;
+  }
+}
