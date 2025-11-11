@@ -6,6 +6,11 @@
   <title>dicestack88's Zone</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Optional: Theme color for mobile browsers -->
+  <meta name="theme-color" content="#ff00ff">
 </head>
 <body>
 
@@ -71,6 +76,15 @@
   </div>
 
   <div class="datetime" id="datetime"></div>
+
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.log('Service Worker Failed:', err));
+    }
+  </script>
 
   <script>
     function updateDateTime() {
