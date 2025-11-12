@@ -1,6 +1,6 @@
 /* === Background + Base Layout === */
 body {
-  background: url('images/changelogbackground.png') no-repeat center center fixed;
+  background: url('images/changelog.png') no-repeat center center fixed;
   background-size: cover;
   background-position: 0% 50%;
   color: #e0f2f1;
